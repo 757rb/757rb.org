@@ -67,7 +67,7 @@ address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fiel
   left: 0;
   right: 0; }
 
-.clouds, .game-info, .next-adventure, .horizon-left,
+.clouds, .game-info, .promotion, .next-adventure, .horizon-left,
 .horizon-right, .more-credits, .more-credits header, .power-ups, .power-ups header, .power-ups img, .credit-info {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -88,7 +88,7 @@ address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fiel
   font-size: 1rem;
   line-height: 130%; }
 
-.credit-info .name, .rupee-button, .next-adventure .rsvp-button, .game-info, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header {
+.credit-info .name, .rupee-button, .next-adventure .rsvp-button, .game-info, .promotion, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header {
   font-family: 'press_start'; }
 
 .credit-info .name {
@@ -99,20 +99,20 @@ address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fiel
   font-size: 1rem;
   line-height: 130%; }
 
-.game-info, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header {
+.game-info, .promotion, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header {
   font-size: 1.21429rem;
   line-height: 120%; }
 
-.game-info, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header, .credit-info .name {
+.game-info, .promotion, .next-adventure .name, .next-adventure .rsvp-count, .more-credits header, .power-ups header, .credit-info .name {
   text-shadow: 0px -1px 0px black, 1px -1px 0px black, 1px 0px 0px black, 1px 1px 0px black, 0px 1px 0px black, -1px 1px 0px black, -1px -1px 0px black, 3px 2px 0px black, 2px 3px 0px black, -1px 3px 0px black; }
 
-.players.active, .audio-controls.active, .more-credits header.active {
+.players.active, .audio-controls.active, .promotion.active, .more-credits header.active {
   text-shadow: 2px 2px 0px white, 2px 1px 0px black, 3px 1px 0px black, 3px 2px 0px black, 3px 3px 0px black, 2px 3px 0px black, 1px 3px 0px black, 1px 1px 0px black; }
 
 .players.active .players-health {
   text-shadow: 2px 2px 0px #ed1c24, 2px 1px 0px black, 3px 1px 0px black, 3px 2px 0px black, 3px 3px 0px black, 2px 3px 0px black, 1px 3px 0px black, 1px 1px 0px black; }
 
-.game-info {
+.game-info, .promotion {
   z-index: 9999; }
 
 .clouds, .horizon-image, .mermaid, .waves, .watery, .power-ups img {
@@ -122,7 +122,7 @@ address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fiel
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor; }
 
-.next-adventure.bounceIn, .mermaid.bounceInUp, .horizon-left.fadeIn, .credits .crab.walking, .power-ups img.hover, .horizon-right.fadeIn, .water.up, .water.down, .credits.up, .credits.down, .mermaid.bobbing, .clouds.moving, .watery.shimmering {
+.promotion .shirt.tada, .promotion .shirt.lightSpeedIn, .next-adventure.bounceIn, .mermaid.bounceInUp, .horizon-left.fadeIn, .credits .crab.walking, .power-ups img.hover, .horizon-right.fadeIn, .water.up, .water.down, .credits.up, .credits.down, .mermaid.bobbing, .clouds.moving, .watery.shimmering {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   -o-animation-duration: 1s;
@@ -135,6 +135,158 @@ address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fiel
   -moz-backface-visibility: visible !important;
   -o-backface-visibility: visible !important;
   backface-visibility: visible !important; }
+
+.promotion .shirt.tada {
+  -webkit-animation-name: tada;
+  -moz-animation-name: tada;
+  -o-animation-name: tada;
+  animation-name: tada; }
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1); }
+
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg); }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg); }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg); }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0); } }
+
+@-moz-keyframes tada {
+  0% {
+    -moz-transform: scale(1); }
+
+  10%, 20% {
+    -moz-transform: scale(0.9) rotate(-3deg); }
+
+  30%, 50%, 70%, 90% {
+    -moz-transform: scale(1.1) rotate(3deg); }
+
+  40%, 60%, 80% {
+    -moz-transform: scale(1.1) rotate(-3deg); }
+
+  100% {
+    -moz-transform: scale(1) rotate(0); } }
+
+@-opera-keyframes tada {
+  0% {
+    -o-transform: scale(1); }
+
+  10%, 20% {
+    -o-transform: scale(0.9) rotate(-3deg); }
+
+  30%, 50%, 70%, 90% {
+    -o-transform: scale(1.1) rotate(3deg); }
+
+  40%, 60%, 80% {
+    -o-transform: scale(1.1) rotate(-3deg); }
+
+  100% {
+    -o-transform: scale(1) rotate(0); } }
+
+@keyframes tada {
+  0% {
+    transform: scale(1); }
+
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg); }
+
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg); }
+
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg); }
+
+  100% {
+    transform: scale(1) rotate(0); } }
+
+.promotion .shirt.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  -moz-animation-name: lightSpeedIn;
+  -o-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    opacity: 1; } }
+
+@-moz-keyframes lightSpeedIn {
+  0% {
+    -moz-transform: translateX(100%) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    -moz-transform: translateX(-20%) skewX(30deg);
+    opacity: 1; }
+
+  80% {
+    -moz-transform: translateX(0%) skewX(-15deg);
+    opacity: 1; }
+
+  100% {
+    -moz-transform: translateX(0%) skewX(0deg);
+    opacity: 1; } }
+
+@-opera-keyframes lightSpeedIn {
+  0% {
+    -o-transform: translateX(100%) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    -o-transform: translateX(-20%) skewX(30deg);
+    opacity: 1; }
+
+  80% {
+    -o-transform: translateX(0%) skewX(-15deg);
+    opacity: 1; }
+
+  100% {
+    -o-transform: translateX(0%) skewX(0deg);
+    opacity: 1; } }
+
+@keyframes lightSpeedIn {
+  0% {
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1; }
+
+  80% {
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1; }
+
+  100% {
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1; } }
 
 .next-adventure.bounceIn {
   -webkit-animation-name: bounceIn;
@@ -1096,6 +1248,23 @@ a:hover {
   margin-left: 2.14286rem; }
   .audio-controls.active {
     color: transparent; }
+
+.promotion {
+  color: white;
+  position: absolute;
+  margin: 1.42857rem 2.14286rem;
+  right: 0;
+  cursor: pointer; }
+  .promotion.active {
+    color: transparent; }
+  .promotion .shirt {
+    display: none;
+    float: right;
+    width: 4rem;
+    margin-left: 0.28571rem; }
+  .promotion header {
+    float: right;
+    text-align: right; }
 
 .players-area {
   display: none; }

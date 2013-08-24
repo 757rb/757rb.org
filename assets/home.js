@@ -541,6 +541,69 @@ _gaq.push(['_trackPageview']);
 
 }).call(this);
 (function() {
+  var Promotion, delay,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  delay = this.rb757.Utils.delay;
+
+  Promotion = (function() {
+    function Promotion() {
+      this.tada = __bind(this.tada, this);
+      this.bringIn = __bind(this.bringIn, this);
+      this.mouseup = __bind(this.mouseup, this);
+      this.mousedown = __bind(this.mousedown, this);
+      this.gotoBooster = __bind(this.gotoBooster, this);
+      this.promotion = $('.promotion');
+      this.shirt = this.promotion.find('.shirt');
+      this.setupEvents();
+    }
+
+    Promotion.prototype.gotoBooster = function() {
+      return window.location.href = 'http://www.booster.com/757rb';
+    };
+
+    Promotion.prototype.mousedown = function() {
+      this.promotion.addClass('active');
+      return false;
+    };
+
+    Promotion.prototype.mouseup = function() {
+      this.promotion.removeClass('active');
+      this.gotoBooster();
+      return false;
+    };
+
+    Promotion.prototype.bringIn = function() {
+      this.shirt.addClass('lightSpeedIn');
+      return this.shirt.show();
+    };
+
+    Promotion.prototype.tada = function() {
+      var _this = this;
+      this.shirt.removeClass('lightSpeedIn');
+      this.shirt.addClass('tada');
+      return delay(1000, function() {
+        return _this.shirt.removeClass('tada');
+      });
+    };
+
+    Promotion.prototype.setupEvents = function() {
+      this.promotion.on('mousedown touchstart', this.mousedown);
+      this.promotion.on('mouseup touchend', this.mouseup);
+      delay(100, this.bringIn);
+      return setInterval(this.tada, 5000);
+    };
+
+    return Promotion;
+
+  })();
+
+  $(function() {
+    return rb757.promotion = new Promotion;
+  });
+
+}).call(this);
+(function() {
   var LayoutManager, Pixels, delay,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
@@ -1184,6 +1247,7 @@ _gaq.push(['_trackPageview']);
   });
 
 }).call(this);
+
 
 
 
